@@ -3,12 +3,12 @@
   become: yes # sudo access
   tasks:
   - name: install nginx server
-    ansible.bultin.package:
+    ansible.builtin.package:
       name: nginx
       state: present
-
+  
   - name: start nginx
-    ansible.bultin.service:
+    ansible.builtin.service:
       name: nginx
       state: started
       enabled: yes
